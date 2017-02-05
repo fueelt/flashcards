@@ -5338,3 +5338,48 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-02-05 18:05:04 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 770ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap-sprockets' with type 'application/javascript'
+Checked in these paths: 
+  /home/teufel/1/ror/app/assets/config
+  /home/teufel/1/ror/app/assets/images
+  /home/teufel/1/ror/app/assets/javascripts
+  /home/teufel/1/ror/app/assets/stylesheets
+  /home/teufel/1/ror/vendor/assets/javascripts
+  /home/teufel/1/ror/vendor/assets/stylesheets
+  /home/teufel/.rvm/gems/ruby-2.4.0/gems/jquery-rails-4.2.2/vendor/assets/javascripts
+  /home/teufel/.rvm/gems/ruby-2.4.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /home/teufel/.rvm/gems/ruby-2.4.0/gems/actioncable-5.0.1/lib/assets/compiled
+  /home/teufel/.rvm/gems/ruby-2.4.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    3:   <head>
+    4:     <title>Флэшкарточкер</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>
+    8:   </head>
+    9:   <body>
+  
+app/assets/javascripts/application.js:15
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___4327996941681829908_69951901631880'
+  Rendering /home/teufel/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/teufel/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/teufel/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (24.8ms)
+  Rendering /home/teufel/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/teufel/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.8ms)
+  Rendering /home/teufel/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/teufel/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/teufel/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.8ms)
+Started GET "/" for 127.0.0.1 at 2017-02-05 18:05:37 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 359ms (Views: 356.7ms | ActiveRecord: 0.0ms)
+
+
