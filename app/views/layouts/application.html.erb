@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Флэшкарточкер</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <%= yield %>
+    <h1 style="margin-left:40%;">Флэшкарточкер</h1>
+      <ul class="nav nav-pills">
+        <li class="active" style="margin-left:40%;"><a href="#">Все карточки</a></li>
+        <li class="active" style="margin-right:40%;"><a href="#">Добавить карточку</a></li>
+      </ul>
+  </body>
+</html>
+
+
