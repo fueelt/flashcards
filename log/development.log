@@ -5282,3 +5282,10 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 567ms (Views: 544.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-02-05 17:14:32 +0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 585ms (Views: 561.8ms | ActiveRecord: 0.0ms)
+
+
