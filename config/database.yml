@@ -1,0 +1,25 @@
+development: 
+  adapter: postgresql
+  encoding: unicode
+  database: linecards
+  pool: 5
+  username: teufel
+  password: '@WERRDAL4@'
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: linecards_test
+  pool: 5
+  username: teufel
+  password: '@WERRDAL4@'
+
+production: 
+  adapter: postgresql
+  encoding: unicode
+  database: linecards_test
+  pool: 5
+  username: teufel
+  password: '@WERRDAL4@'
+
+  prepared_statements: false
