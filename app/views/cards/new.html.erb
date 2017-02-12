@@ -1,5 +1,6 @@
 <h4>Создание новой карточки</h4>
 <%= simple_form_for :card, url: cards_path do |f| %>
+  <%= render 'shared/error_messages' %>
   <%= f.input :original_text, :label => "original text" %>
   <%= f.input :translated_text, :label => "translated text" %>
   <%= f.input :review_date, as: :date, start_year: Date.today.year - 90,
