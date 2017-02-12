@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  get '/' => 'home#index'
-  get '/cards' => 'cards#show'
+ 
+ resources :cards
+ # get '/' => 'home#index'
+ # get '/cards' => 'cards#index'
+ # get '/cards' => 'cards#edit'
+ root 'home#index'
 end

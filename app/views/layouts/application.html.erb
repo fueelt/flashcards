@@ -4,7 +4,7 @@
     <title>Флэшкарточкер</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
       <div class="container" style="margin-top: 80px; "  >
@@ -16,7 +16,7 @@
         <nav class="navbar-inner">
           <ul class="pager">
             <li><%= link_to "Все Карточки", cards_path %></li>
-            <li><a href="#">Добавить карточку</a></li>
+            <li><%= link_to "Добавить карточку", new_card_path %></li>
           </ul>
         </nav>
       </div> 
