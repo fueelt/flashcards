@@ -3,11 +3,7 @@
   <%= render 'shared/error_messages' %>
   <%= f.input :original_text, :label => "original text" %>
   <%= f.input :translated_text, :label => "translated text" %>
-  <%= f.input :review_date, as: :date, start_year: Date.today.year - 90,
-                                       end_year: Date.today.year + 90, 
-                                       month: Date.today.month, 
-                                       day: Date.today.day, 
-                                       order: [:day, :month, :year] %><br>
+
   <%= f.button :submit %> 
 <% end %>
 

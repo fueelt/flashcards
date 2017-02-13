@@ -1,7 +1,8 @@
 class CardsController < ApplicationController
-  
+  before_action :show_card, except: [:index, :new, :create]
+
   def index
-  	@cards = Card.all # список всех карточек
+  	@cards = Card.all
   end
 
   def new
@@ -9,11 +10,9 @@ class CardsController < ApplicationController
   end
   
   def show
-    @card = Card.find(params[:id]) #показывает карточку
   end
   
   def edit
-  	@card = Card.find(params[:id]) #редактирование карточки
   end 
   
   def create
@@ -26,7 +25,6 @@ class CardsController < ApplicationController
   end
 
   def update 
-  	@card = Card.find(params[:id])
   	if @card.update(card_params)
   		redirect_to @cards
   	else
@@ -35,15 +33,17 @@ class CardsController < ApplicationController
   end
 
   def destroy
-  	@card = Card.find(params[:id])
   	@card.destroy
-
-  	redirect_to cards_path
+    redirect_to cards_path
   end
-
   
 private 
-   def  card_params
-     params.require(:card).permit(:translated_text, :original_text, :review_date)     
-   end
+  
+  def show_card
+    @card = Card.find(params[:id])
+  end 
+
+  def card_params
+    params.require(:card).permit(:translated_text, :original_text, :review_date)     
+  end
 end
