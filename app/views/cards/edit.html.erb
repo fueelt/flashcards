@@ -1,0 +1,9 @@
+<h4>Редактирование карточки</h4>
+<%= render 'shared/error_messages' %>
+<%= simple_form_for :card, url: cards_path do |f| %>
+  <%= f.input :original_text, :label => "original text" %>
+  <%= f.input :translated_text, :label => "translated text" %>
+  <%= f.input :review_date, :label => "review_date" %><br>
+  <%= f.button :submit %> 
+<% end %>
+
