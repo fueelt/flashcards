@@ -6,8 +6,8 @@ class Card < ApplicationRecord
        self.review_date = 3.days.from_now 
     end
 
-	VALID_REGEX = /\A[a-z]+\z/i 
-    validates :translated_text, :original_text, format: { with: VALID_REGEX }
+#	VALID_REGEX = /\A[a-z]+\z/i 
+#    validates :translated_text, :original_text, format: { with: VALID_REGEX }
     
     def comparison
       if original_text == translated_text
