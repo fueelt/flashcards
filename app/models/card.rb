@@ -6,7 +6,7 @@ class Card < ApplicationRecord
   
   before_create do
     self.review_date = 3.days.from_now 
-    self.original_text.delete if self.translated_text.nil? 
+    self.original_text == self.translated_text if self.translated_text.nil? 
   end
 
 #	VALID_REGEX = /\A[a-z]+\z/i 
