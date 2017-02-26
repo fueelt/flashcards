@@ -20,13 +20,12 @@ rows.each do |row|
   hrefs.each do |href|
     s_url = BASE_URL + href
     
-    list =  Nokogiri::HTML(open(s_url)) #  не работает
+    list =  Nokogiri::HTML(open(s_url)) 
     cards = list.css(".rowB", ".rowA")    
       cards.each do |card|             
-	    translated_text = card.css('td[3]').text
-	    next if !translated_text.nil?
-		original_text = card.css('.bigLetter').text
-		card = Card.create!( original_text: original_text, translated_text: translated_text )
+	    original_text = card.css('.bigLetter').text
+		translated_text = card.css('td[3]').text
+		card = Card.create( original_text: original_text, translated_text: translated_text )
       end
    end 
  end 
