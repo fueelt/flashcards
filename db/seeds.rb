@@ -25,6 +25,7 @@ rows.each do |row|
       cards.each do |card|             
 	    original_text = card.css('.bigLetter').text
 		translated_text = card.css('td[3]').text
+		next if translated_text.nil? # и здесь тоже работает)
 		card = Card.create( original_text: original_text, translated_text: translated_text )
       end
    end 

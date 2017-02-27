@@ -2,11 +2,12 @@ class Card < ApplicationRecord
 	validates :original_text, :translated_text,  presence: true
   validate :comparison 
 
-  before_create do
-    self.review_date = 3.days.from_now 
-    next if translated_text.nil?
-  end
+  before_create :set_review_date
 
+  def set_review_date
+    self.review_date = 3.days.from_now 
+  end
+  
 	# VALID_REGEX = /\A[a-z]+\z/i 
   #  validates :translated_text, :original_text, format: { with: VALID_REGEX }
     
